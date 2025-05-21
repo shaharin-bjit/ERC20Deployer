@@ -93,9 +93,9 @@ const TokenForm: React.FC<TokenFormProps> = ({ onDeploy }) => {
 
       // Deploy the contract
       const contract = await factory.deploy(
-        formData.name,
-        formData.symbol,
-        formData.totalSupply,
+        // formData.name,
+        // formData.symbol,
+        // formData.totalSupply,
         // formData.decimals,
         // totalSupplyWithDecimals
         signer.getAddress()
@@ -199,7 +199,8 @@ const TokenForm: React.FC<TokenFormProps> = ({ onDeploy }) => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={"BJITCoin"}
+            readOnly
             onChange={handleChange}
             placeholder="My Token"
             className={`input w-full ${
@@ -220,7 +221,8 @@ const TokenForm: React.FC<TokenFormProps> = ({ onDeploy }) => {
             type="text"
             id="symbol"
             name="symbol"
-            value={formData.symbol}
+            value={"BJIT"}
+            readOnly
             onChange={handleChange}
             placeholder="MTK"
             className={`input w-full uppercase ${
@@ -266,7 +268,8 @@ const TokenForm: React.FC<TokenFormProps> = ({ onDeploy }) => {
             type="text"
             id="totalSupply"
             name="totalSupply"
-            value={formData.totalSupply}
+            value={"50000000000"}
+            readOnly
             onChange={handleChange}
             placeholder="1000000"
             className={`input w-full ${
