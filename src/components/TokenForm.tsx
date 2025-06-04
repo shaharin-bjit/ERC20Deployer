@@ -23,10 +23,10 @@ const TokenForm: React.FC<TokenFormProps> = ({ onDeploy }) => {
   const { isConnected, signer, chainId, account, networkType } = useWeb3();
 
   const [formData, setFormData] = useState<TokenFormData>({
-    name: "",
-    symbol: "",
+    name: "BJITCoin",
+    symbol: "BJIT",
     decimals: 18,
-    totalSupply: "",
+    totalSupply: "50000000000", // 50 billion tokens
   });
 
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
